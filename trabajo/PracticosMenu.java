@@ -18,7 +18,7 @@ public class PracticosMenu {
                     menuPractico21();
                     break;
                 case 2:
-                    menuPractico22(); // Asegurate de tener este método implementado
+                    menuPractico22();
                     break;
                 case 3:
                     menuPractico3();
@@ -32,7 +32,6 @@ public class PracticosMenu {
         }
     }
 
-    // Métodos para leer datos seguros
     static int leerEntero() {
         while (true) {
             try {
@@ -53,7 +52,6 @@ public class PracticosMenu {
         }
     }
 
-    // Menú del práctico 2.1
     static void menuPractico21() {
         while (true) {
             System.out.println("\n--- Práctico 2.1 - Ejercicios ---");
@@ -94,7 +92,6 @@ public class PracticosMenu {
         }
     }
 
-    // 1 - Persona
     static void ejercicioPersona() {
         Persona p = new Persona("Juan", 20);
         System.out.println("Nombre: " + p.nombre);
@@ -116,7 +113,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 2.1.2 Dado
     static void ejercicioDado() {
         Dado dado = new Dado();
         System.out.println("Lanzando dado... Salió: " + dado.lanzar());
@@ -267,7 +263,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 2.2.1 Conversor de temperatura
     static void ejercicioConversorTemperatura() {
         System.out.print("Ingrese temperatura en Celsius: ");
         double c = leerDouble();
@@ -282,7 +277,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 2.2.2 Planificador de cosecha
     static void ejercicioPlanificadorCosecha() {
         System.out.print("Ingrese cultivo: ");
         String cultivo = sc.nextLine().toLowerCase();
@@ -311,7 +305,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 2.2.3 Cazando fantasmas
     static void ejercicioCazandoFantasmas() {
         System.out.print("Ingrese temperatura (°C): ");
         double temp = leerDouble();
@@ -331,7 +324,7 @@ public class PracticosMenu {
         }
 
         String determinarFantasma() {
-            // Basado en pistas simplificadas
+
             if (temperatura < 10 && escritura.equals("alta"))
                 return "Fantasma de hielo";
             if (temperatura > 20 && escritura.equals("baja"))
@@ -340,7 +333,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 2.2.4 Contraseña segura
     static void ejercicioContrasenaSegura() {
         System.out.print("Ingrese contraseña: ");
         String contrasena = sc.nextLine();
@@ -354,14 +346,13 @@ public class PracticosMenu {
             if (pass.length() < 8)
                 return false;
             if (!pass.matches(".*\\d.*"))
-                return false; // debe tener al menos un número
+                return false;
             if (!pass.matches(".*[A-Z].*"))
-                return false; // al menos una mayúscula
+                return false;
             return true;
         }
     }
 
-    // Ejercicio 2.2.5 Simulador de energía
     static void ejercicioSimuladorEnergia() {
         RedEnergetica red = new RedEnergetica(1000, 800);
         System.out.println("Generación: " + red.calcularGeneracion() + " kW");
@@ -379,11 +370,11 @@ public class PracticosMenu {
         }
 
         int calcularGeneracion() {
-            return generadores * 100; // ejemplo: cada generador 100 kW
+            return generadores * 100;
         }
 
         int calcularConsumo() {
-            return maquinas * 80; // cada máquina consume 80 kW
+            return maquinas * 80;
         }
 
         String estadoRed() {
@@ -397,7 +388,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 2.2.6 Verificación de rango competitivo
     static void ejercicioVerificacionRango() {
         System.out.print("Ingrese puntuación: ");
         int puntuacion = leerEntero();
@@ -461,7 +451,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 3.1 Animales Zoológicos
     static void ejercicioAnimalesZoologicos() {
         AnimalZologico[] animales = new AnimalZologico[3];
         animales[0] = new Leon("Alex");
@@ -518,7 +507,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 3.2 Biblioteca Digital
     static void ejercicioBibliotecaDigital() {
         Publicacion[] publicaciones = new Publicacion[2];
         publicaciones[0] = new Libro("The name of the wind.", 2007);
@@ -566,7 +554,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 3.3 Figuras Geométricas
     static void ejercicioFigurasGeometricas() {
         Figura[] figuras = new Figura[3];
         figuras[0] = new Cuadrado(4);
@@ -624,7 +611,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 3.4 Jerarquía de Animales
     static class Animal {
         String nombre;
         int edad;
@@ -684,7 +670,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 3.5 Procesador de Pago
     static void ejercicioProcesadorPago() {
         ProcesadorPago pago = new ProcesadorPago(1000, 15); // totalVenta=1000, porcentajeDescuento=15%
         double totalFinal = pago.calcularTotalConDescuento();
@@ -705,7 +690,6 @@ public class PracticosMenu {
         }
     }
 
-    // Ejercicio 3.6 Sistema de Empleados
     static void ejercicioSistemaEmpleados() {
         Empleado[] empleados = new Empleado[3];
 
